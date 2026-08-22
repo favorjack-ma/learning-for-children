@@ -25,7 +25,7 @@
               "channel": "지니스쿨 역사 GeniSchool History",
               "lang": "ko",
               "durationSec": 254,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -34,7 +34,7 @@
               "channel": "빅퀘스천 Big Questions",
               "lang": "ko",
               "durationSec": 938,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -43,7 +43,7 @@
               "channel": "play 채널A",
               "lang": "ko",
               "durationSec": 384,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -52,7 +52,7 @@
               "channel": "박보라",
               "lang": "ko",
               "durationSec": 321,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -61,7 +61,7 @@
               "channel": "로빈의 역사 기록 / Robin's Historical Records",
               "lang": "ko",
               "durationSec": 264,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -75,7 +75,7 @@
               "channel": "Happy Learning English",
               "lang": "en",
               "durationSec": 194,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -84,7 +84,7 @@
               "channel": "TED-Ed",
               "lang": "en",
               "durationSec": 339,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -93,7 +93,7 @@
               "channel": "Free School",
               "lang": "en",
               "durationSec": 492,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -102,7 +102,7 @@
               "channel": "Lesson Boosters - Kids Science and History Videos",
               "lang": "en",
               "durationSec": 300,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -111,7 +111,7 @@
               "channel": "History in Five",
               "lang": "en",
               "durationSec": 329,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -120,7 +120,7 @@
               "channel": "The Daily Bellringer",
               "lang": "en",
               "durationSec": 303,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -134,7 +134,7 @@
               "channel": "CrashCourse",
               "lang": "en",
               "durationSec": 714,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -143,7 +143,7 @@
               "channel": "CrashCourse",
               "lang": "en",
               "durationSec": 687,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -166,7 +166,7 @@
               "channel": "유요",
               "lang": "ko",
               "durationSec": 145,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -175,7 +175,7 @@
               "channel": "로빈의 역사 기록 / Robin's Historical Records",
               "lang": "ko",
               "durationSec": 297,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -184,7 +184,7 @@
               "channel": "로빈의 역사 기록 / Robin's Historical Records",
               "lang": "ko",
               "durationSec": 368,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -193,7 +193,7 @@
               "channel": "궁금소",
               "lang": "ko",
               "durationSec": 754,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -202,7 +202,7 @@
               "channel": "역주행-한국사, 세계사",
               "lang": "ko",
               "durationSec": 690,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -216,7 +216,7 @@
               "channel": "Happy Learning English",
               "lang": "en",
               "durationSec": 300,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -225,7 +225,7 @@
               "channel": "Lesson Boosters - Kids Science and History Videos",
               "lang": "en",
               "durationSec": 242,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -234,7 +234,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 353,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -243,7 +243,7 @@
               "channel": "Lesson Boosters - Kids Science and History Videos",
               "lang": "en",
               "durationSec": 218,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -252,7 +252,7 @@
               "channel": "KidsKonnect",
               "lang": "en",
               "durationSec": 316,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
