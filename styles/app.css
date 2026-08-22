@@ -449,6 +449,38 @@ button {
   font-size: 15px;
 }
 
+.parent-topic-group {
+  padding-top: 16px;
+  margin-top: 16px;
+  border-top: 2px solid var(--border);
+}
+
+.parent-topic-group:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.parent-topic-header {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.parent-section-group {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+}
+
+.parent-section-group-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  padding: 8px 0 4px;
+}
+
 .parent-video-row {
   display: flex;
   align-items: center;

@@ -1,4 +1,5 @@
 import { el } from "./dom-utils.js";
+import { formatTime } from "./player/controls.js";
 
 function renderPinGate(container, ctx) {
   container.innerHTML = "";
@@ -137,49 +138,68 @@ function buildPendingSection(container, ctx) {
   const section = el("section", "parent-section");
   section.appendChild(el("h3", null, "승인 대기 중인 영상"));
 
-  const pending = [];
+  // Group pending videos by topic, then by section label, so they read as
+  // distinct blocks instead of one long undifferentiated list.
+  const topicGroups = [];
   for (const topic of ctx.data.topics) {
+    const sectionGroups = [];
     for (const videoSection of topic.sections) {
-      for (const video of videoSection.videos) {
-        if (!ctx.isVideoApproved(video)) {
-          pending.push({ topic, videoSection, video });
-        }
+      const pendingVideos = videoSection.videos.filter((video) => !ctx.isVideoApproved(video));
+      if (pendingVideos.length > 0) {
+        sectionGroups.push({ label: videoSection.label, videos: pendingVideos });
       }
+    }
+    if (sectionGroups.length > 0) {
+      topicGroups.push({ topic, sectionGroups });
     }
   }
 
-  if (pending.length === 0) {
+  if (topicGroups.length === 0) {
     section.appendChild(el("p", null, "대기 중인 영상이 없어요."));
     return section;
   }
 
-  for (const { topic, videoSection, video } of pending) {
-    const row = el("div", "parent-video-row");
+  for (const { topic, sectionGroups } of topicGroups) {
+    const topicGroup = el("div", "parent-topic-group");
+    topicGroup.appendChild(el("h4", "parent-topic-header", `${topic.emoji ?? "📺"} ${topic.title}`));
 
-    const info = el("div", "info");
-    info.appendChild(el("div", "video-title", video.title));
-    info.appendChild(el("div", "meta", `${topic.title} · ${videoSection.label} · ${video.channel}`));
-    row.appendChild(info);
+    for (const { label, videos } of sectionGroups) {
+      const sectionGroup = el("div", "parent-section-group");
+      sectionGroup.appendChild(el("div", "parent-section-group-label", label));
 
-    const previewLink = document.createElement("a");
-    previewLink.href = `https://www.youtube.com/watch?v=${video.videoId}`;
-    previewLink.target = "_blank";
-    previewLink.rel = "noopener noreferrer";
-    previewLink.className = "chip-btn";
-    previewLink.textContent = "미리보기";
-    row.appendChild(previewLink);
+      for (const video of videos) {
+        const row = el("div", "parent-video-row");
 
-    const approveBtn = document.createElement("button");
-    approveBtn.type = "button";
-    approveBtn.className = "chip-btn";
-    approveBtn.textContent = "승인";
-    approveBtn.addEventListener("click", () => {
-      ctx.approveVideo(video.videoId);
-      renderParentDashboard(container, ctx);
-    });
-    row.appendChild(approveBtn);
+        const info = el("div", "info");
+        info.appendChild(el("div", "video-title", video.title));
+        info.appendChild(el("div", "meta", `${video.channel} · ${formatTime(video.durationSec)}`));
+        row.appendChild(info);
 
-    section.appendChild(row);
+        const previewLink = document.createElement("a");
+        previewLink.href = `https://www.youtube.com/watch?v=${video.videoId}`;
+        previewLink.target = "_blank";
+        previewLink.rel = "noopener noreferrer";
+        previewLink.className = "chip-btn";
+        previewLink.textContent = "미리보기";
+        row.appendChild(previewLink);
+
+        const approveBtn = document.createElement("button");
+        approveBtn.type = "button";
+        approveBtn.className = "chip-btn";
+        approveBtn.textContent = "승인";
+        approveBtn.addEventListener("click", () => {
+          ctx.approveVideo(video.videoId);
+          renderParentDashboard(container, ctx);
+        });
+        row.appendChild(approveBtn);
+
+        sectionGroup.appendChild(row);
+      }
+
+      topicGroup.appendChild(sectionGroup);
+    }
+
+    section.appendChild(topicGroup);
   }
 
   return section;
