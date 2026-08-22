@@ -144,6 +144,114 @@
           ]
         }
       ]
+    },
+    {
+      "id": "world-wars",
+      "title": "세계대전",
+      "subtitle": "20세기 세계사",
+      "emoji": "⚔️",
+      "sections": [
+        {
+          "label": "1단계 · 한국어로 큰 그림",
+          "videos": [
+            {
+              "videoId": "NcVJNRwNNQQ",
+              "title": "1차 세계대전 2분 요약 노래 [上]",
+              "channel": "유요",
+              "lang": "ko",
+              "durationSec": 145,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "eUtiZ7PJqwo",
+              "title": "제1차 세계대전의 모든 것: 발발 원인부터 전개, 결말까지 l 유럽 역사 26부",
+              "channel": "로빈의 역사 기록 / Robin's Historical Records",
+              "lang": "ko",
+              "durationSec": 297,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "19Oz9-8AS-0",
+              "title": "인류 최악의 전쟁, 제2차 세계대전 총정리 l 발발부터 종전까지 한눈에! l 유럽 역사 31부",
+              "channel": "로빈의 역사 기록 / Robin's Historical Records",
+              "lang": "ko",
+              "durationSec": 368,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "oB3Vev8kcBY",
+              "title": "10분만에 알아보는 2차세계대전",
+              "channel": "궁금소",
+              "lang": "ko",
+              "durationSec": 754,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "ZVsnmB3AP4E",
+              "title": "실감나는 1차 세계대전 10분 요약",
+              "channel": "역주행-한국사, 세계사",
+              "lang": "ko",
+              "durationSec": 690,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        },
+        {
+          "label": "2단계 · 영어로 다시 보기",
+          "videos": [
+            {
+              "videoId": "LQ6dkIW051M",
+              "title": "FIRST WORLD WAR | Educational Video for Kids",
+              "channel": "Happy Learning English",
+              "lang": "en",
+              "durationSec": 300,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "2yyvO18Ax6Y",
+              "title": "WORLD WAR 1 for Kids | Learn the Facts, Causes, and Events of Wolrd War 1 Lesson Boosters History",
+              "channel": "Lesson Boosters - Kids Science and History Videos",
+              "lang": "en",
+              "durationSec": 242,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "RBtyaelrgmg",
+              "title": "World War I for Kids | History Made Easy",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 353,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "Q8cr70J5Ses",
+              "title": "WORLD WAR 2 for Kids | Learn the Causes, Events, and Facts about  World War 2 | Lesson Boosters",
+              "channel": "Lesson Boosters - Kids Science and History Videos",
+              "lang": "en",
+              "durationSec": 218,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "aGkxezQaO8g",
+              "title": "World War II For Kids | Kid-Friendly Facts and Explanations!",
+              "channel": "KidsKonnect",
+              "lang": "en",
+              "durationSec": 316,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
