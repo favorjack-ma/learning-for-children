@@ -122,6 +122,24 @@
               "durationSec": 303,
               "approved": true,
               "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "ioBjYhmANaU",
+              "title": "George Washington Crosses the Delaware | American Revolution Made Easy | Battle of Trenton",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 272,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "3lXnfitSoYw",
+              "title": "Biography of George Washington for Kids: Meet the American President - FreeSchool",
+              "channel": "Free School",
+              "lang": "en",
+              "durationSec": 294,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
             }
           ]
         },
@@ -253,6 +271,230 @@
               "lang": "en",
               "durationSec": 316,
               "approved": true,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "everest-expedition",
+      "profile": "형",
+      "title": "에베레스트 정복",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🏔️",
+      "sections": [
+        {
+          "label": "탐험가 이야기",
+          "videos": [
+            {
+              "videoId": "iIqV_JaRnqQ",
+              "title": "Sir Edmund Hillary For Kids | Bedtime History",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 350,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "J8nkzkWhC_g",
+              "title": "Climbing Mount Everest for Kids | Bedtime History",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 584,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "great-wall-of-china",
+      "profile": "형",
+      "title": "만리장성",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🧱",
+      "sections": [
+        {
+          "label": "중국 역사",
+          "videos": [
+            {
+              "videoId": "WiuflIHPIWM",
+              "title": "The History of the Great Wall of China for Kids - FreeSchool",
+              "channel": "Charles Greer",
+              "lang": "en",
+              "durationSec": 264,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "pZGgHmqySa8",
+              "title": "The Great Wall of China for Kids",
+              "channel": "Homeschool Pop",
+              "lang": "en",
+              "durationSec": 411,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "american-civil-war",
+      "profile": "형",
+      "title": "미국 남북전쟁",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "⚖️",
+      "sections": [
+        {
+          "label": "남북전쟁",
+          "videos": [
+            {
+              "videoId": "aVXJnA-kyog",
+              "title": "The Civil War (for kids) | Learn about the causes and impact of the Civil War | Lesson Boosters",
+              "channel": "Lesson Boosters - Kids Science and History Videos",
+              "lang": "en",
+              "durationSec": 208,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "USxFjU87BqE",
+              "title": "Causes of the American Civil War - Educational Social Studies Video for Elementary Students & Kids",
+              "channel": "Bow Tie Guy and Wife",
+              "lang": "en",
+              "durationSec": 354,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ancient-rome",
+      "profile": "형",
+      "title": "고대 로마",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🏛️",
+      "sections": [
+        {
+          "label": "율리우스 카이사르",
+          "videos": [
+            {
+              "videoId": "yrzMpCag_C4",
+              "title": "Julius Caesar for Kids | Roman Empire | Bedtime History",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 469,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "2zz-_oEBwOc",
+              "title": "Julius Caesar Biography | DAILY BELLRINGER",
+              "channel": "The Daily Bellringer",
+              "lang": "en",
+              "durationSec": 332,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ancient-egypt",
+      "profile": "형",
+      "title": "고대 이집트",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "𓂀",
+      "sections": [
+        {
+          "label": "왕가의 계곡·투탕카멘",
+          "videos": [
+            {
+              "videoId": "lKQC6FBdMfk",
+              "title": "Valley of the Kings | Ancient Egypt | History Made Easy",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 421,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "T47TTu-4jQQ",
+              "title": "King Tut for Kids | Learn all about the \"boy king\" King Tutankhamun",
+              "channel": "Learn Bright",
+              "lang": "en",
+              "durationSec": 412,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "athenian-democracy",
+      "profile": "형",
+      "title": "아테네 민주주의",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🏺",
+      "sections": [
+        {
+          "label": "고대 그리스",
+          "videos": [
+            {
+              "videoId": "3o7yl5zILV0",
+              "title": "Athenian Democracy - reading lesson",
+              "channel": "Mr. Dowling",
+              "lang": "en",
+              "durationSec": 255,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "_T__GTbpxZs",
+              "title": "Athenian Democracy | History of Greece Made Easy",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 332,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "byzantine-empire",
+      "profile": "형",
+      "title": "비잔틴 제국",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "👑",
+      "sections": [
+        {
+          "label": "비잔틴 역사",
+          "videos": [
+            {
+              "videoId": "1q4DuW2r-wM",
+              "title": "The Byzantine Empire in 8 Minutes",
+              "channel": "Independent History: Unbought & Unbossed",
+              "lang": "en",
+              "durationSec": 501,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "BNURBs091pk",
+              "title": "The Byzantine Empire Explained in 13 Minutes",
+              "channel": "Captivating History",
+              "lang": "en",
+              "durationSec": 806,
+              "approved": false,
               "verifiedAt": "2026-08-22"
             }
           ]

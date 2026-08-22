@@ -5,6 +5,7 @@ import {
   generateTopicId,
   upsertVideo,
   setVideoApproval,
+  removeVideo,
   TopicsStoreError,
 } from "../tools/lib/topics-store.mjs";
 
@@ -236,4 +237,36 @@ test("setVideoApproval never mutates the input data", () => {
   const data = dataWithOneVideo(false);
   setVideoApproval(data, "PBn7iWzrKoI", true);
   assert.equal(data.topics[0].sections[0].videos[0].approved, false);
+});
+
+test("removeVideo deletes the video and drops the emptied section/topic", () => {
+  const data = dataWithOneVideo(true);
+  const { updated, found } = removeVideo(data, "PBn7iWzrKoI");
+
+  assert.equal(updated.topics.length, 0);
+  assert.equal(found.topic.id, "civil-revolutions");
+  assert.equal(found.video.videoId, "PBn7iWzrKoI");
+});
+
+test("removeVideo keeps a topic/section that still has other videos", () => {
+  const data = dataWithOneVideo(true);
+  data.topics[0].sections[0].videos.push(video({ videoId: "IIDfZ-8o4jE" }));
+
+  const { updated } = removeVideo(data, "PBn7iWzrKoI");
+
+  assert.equal(updated.topics.length, 1);
+  assert.equal(updated.topics[0].sections[0].videos.length, 1);
+  assert.equal(updated.topics[0].sections[0].videos[0].videoId, "IIDfZ-8o4jE");
+});
+
+test("removeVideo returns found: null when the videoId doesn't exist", () => {
+  const data = dataWithOneVideo(true);
+  const { found } = removeVideo(data, "does-not-exist");
+  assert.equal(found, null);
+});
+
+test("removeVideo never mutates the input data", () => {
+  const data = dataWithOneVideo(true);
+  removeVideo(data, "PBn7iWzrKoI");
+  assert.equal(data.topics[0].sections[0].videos.length, 1);
 });

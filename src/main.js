@@ -5,6 +5,12 @@ import {
   revoke as revokeOverride,
   isApproved,
 } from "./approvals.js";
+import {
+  withRemovalsApplied,
+  remove as removeOverride,
+  restore as restoreOverride,
+  isRemoved,
+} from "./removals.js";
 import * as storage from "./storage.js";
 import { getTodayDateKey } from "./time-limit.js";
 import { resetDay } from "./watch-log.js";
@@ -58,6 +64,7 @@ async function main() {
 
   let watchLog = storage.loadWatchLog();
   let approvalOverrides = storage.loadApprovalOverrides();
+  let removals = storage.loadRemovals();
   let settings = storage.loadSettings();
   let selectedProfile = storage.loadSelectedProfile();
   if (!selectedProfile || !data.profiles.includes(selectedProfile)) {
@@ -102,10 +109,13 @@ async function main() {
       renderCurrentView();
     },
     getVisibleData() {
-      return filterApproved(withEffectiveApproval(data, approvalOverrides));
+      return filterApproved(withEffectiveApproval(withRemovalsApplied(data, removals), approvalOverrides));
     },
     isVideoApproved(video) {
       return isApproved(video, approvalOverrides);
+    },
+    isVideoRemoved(video) {
+      return isRemoved(video, removals);
     },
     getTodayDateKey,
     navigate(nextRoute) {
@@ -145,6 +155,14 @@ async function main() {
     revokeVideo(videoId) {
       approvalOverrides = revokeOverride(approvalOverrides, videoId);
       storage.saveApprovalOverrides(approvalOverrides);
+    },
+    removeVideo(videoId) {
+      removals = removeOverride(removals, videoId);
+      storage.saveRemovals(removals);
+    },
+    restoreVideo(videoId) {
+      removals = restoreOverride(removals, videoId);
+      storage.saveRemovals(removals);
     },
     getErrorLog() {
       return storage.loadErrorLog();

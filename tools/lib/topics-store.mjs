@@ -109,4 +109,30 @@ function setVideoApproval(data, videoId, approved) {
   return { updated: { ...data, topics }, found };
 }
 
-export { TopicsStoreError, slugify, generateTopicId, upsertVideo, setVideoApproval };
+/**
+ * Permanently removes a video by videoId, wherever it lives in the data.
+ * Drops any section or topic left with no videos. Returns { updated, found }
+ * — `found` is { topic, video } as it was before removal, or null if no
+ * video with that id exists anywhere. Never mutates the input.
+ */
+function removeVideo(data, videoId) {
+  let found = null;
+  const topics = data.topics
+    .map((topic) => ({
+      ...topic,
+      sections: topic.sections
+        .map((section) => ({
+          ...section,
+          videos: section.videos.filter((video) => {
+            if (video.videoId !== videoId) return true;
+            found = { topic, video };
+            return false;
+          }),
+        }))
+        .filter((section) => section.videos.length > 0),
+    }))
+    .filter((topic) => topic.sections.length > 0);
+  return { updated: { ...data, topics }, found };
+}
+
+export { TopicsStoreError, slugify, generateTopicId, upsertVideo, setVideoApproval, removeVideo };

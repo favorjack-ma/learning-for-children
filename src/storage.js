@@ -7,6 +7,7 @@
 const KEYS = {
   watchLog: "lfc.watchlog.v1",
   approvals: "lfc.approvals.v1",
+  removals: "lfc.removals.v1",
   settings: "lfc.settings.v1",
   errorLog: "lfc.errors.v1",
   selectedProfile: "lfc.selectedProfile.v1",
@@ -37,6 +38,14 @@ function loadApprovalOverrides() {
 
 function saveApprovalOverrides(overrides) {
   localStorage.setItem(KEYS.approvals, JSON.stringify(overrides));
+}
+
+function loadRemovals() {
+  return safeParse(localStorage.getItem(KEYS.removals), {});
+}
+
+function saveRemovals(removals) {
+  localStorage.setItem(KEYS.removals, JSON.stringify(removals));
 }
 
 /** { dailyLimitMinutes: number|null, parentPin: string|null } — null means "not set, use topics.json default". */
@@ -77,6 +86,8 @@ export {
   saveWatchLog,
   loadApprovalOverrides,
   saveApprovalOverrides,
+  loadRemovals,
+  saveRemovals,
   loadSettings,
   saveSettings,
   loadErrorLog,
