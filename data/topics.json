@@ -129,7 +129,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 272,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -138,7 +138,7 @@
               "channel": "Free School",
               "lang": "en",
               "durationSec": 294,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -293,7 +293,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 350,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -302,7 +302,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 584,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -325,7 +325,7 @@
               "channel": "Charles Greer",
               "lang": "en",
               "durationSec": 264,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -334,7 +334,7 @@
               "channel": "Homeschool Pop",
               "lang": "en",
               "durationSec": 411,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -357,7 +357,7 @@
               "channel": "Lesson Boosters - Kids Science and History Videos",
               "lang": "en",
               "durationSec": 208,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -366,7 +366,7 @@
               "channel": "Bow Tie Guy and Wife",
               "lang": "en",
               "durationSec": 354,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -389,7 +389,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 469,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -398,7 +398,7 @@
               "channel": "The Daily Bellringer",
               "lang": "en",
               "durationSec": 332,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -421,7 +421,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 421,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -430,7 +430,7 @@
               "channel": "Learn Bright",
               "lang": "en",
               "durationSec": 412,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -453,7 +453,7 @@
               "channel": "Mr. Dowling",
               "lang": "en",
               "durationSec": 255,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -462,7 +462,7 @@
               "channel": "Bedtime History",
               "lang": "en",
               "durationSec": 332,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
@@ -485,7 +485,7 @@
               "channel": "Independent History: Unbought & Unbossed",
               "lang": "en",
               "durationSec": 501,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             },
             {
@@ -494,7 +494,7 @@
               "channel": "Captivating History",
               "lang": "en",
               "durationSec": 806,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-08-22"
             }
           ]
