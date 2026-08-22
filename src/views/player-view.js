@@ -7,6 +7,7 @@ import { getTodayDateKey, isLimitReached } from "../time-limit.js";
 
 const TICK_MS = 1000;
 const RATE_STEPS = [0.75, 1];
+const MANUAL_UNLOCK_MS = 6000;
 
 function renderMessageScreen(container, { emoji, title, message, actionLabel, onAction }) {
   container.innerHTML = "";
@@ -66,11 +67,21 @@ function render(container, ctx) {
   let destroyed = false;
   let lastTickAt = null;
   let inAdMode = false;
+  let manualUnlockTimer = null;
 
   function setAdMode(isAd) {
     if (isAd === inAdMode) return;
     inAdMode = isAd;
     overlay.classList.toggle("ad-mode", isAd);
+  }
+
+  function skipAd() {
+    overlay.classList.add("manual-unlock");
+    clearTimeout(manualUnlockTimer);
+    manualUnlockTimer = setTimeout(() => {
+      overlay.classList.remove("manual-unlock");
+      manualUnlockTimer = null;
+    }, MANUAL_UNLOCK_MS);
   }
 
   const controls = createControlsBar({
@@ -118,6 +129,7 @@ function render(container, ctx) {
         frameWrap.requestFullscreen?.();
       }
     },
+    onSkipAd: () => skipAd(),
     onExit: () => exitToList(),
   });
   view.appendChild(controls.root);
@@ -168,11 +180,19 @@ function render(container, ctx) {
     requestAnimationFrame(progressLoop);
   }
 
-  function exitToList({ limitReached = false } = {}) {
+  function teardown() {
     if (destroyed) return;
     destroyed = true;
+    clearTimeout(manualUnlockTimer);
     stopTicking();
     ytPlayer?.destroy?.();
+  }
+
+  function exitToList({ limitReached = false } = {}) {
+    if (destroyed) {
+      return;
+    }
+    teardown();
     if (limitReached) {
       ctx.showLimitReached();
     } else {
@@ -200,29 +220,21 @@ function render(container, ctx) {
         stopTicking();
       } else if (state === PLAYER_STATE.ENDED) {
         controls.setPlaying(false);
-        stopTicking();
         const key = getTodayDateKey();
         ctx.updateWatchLog(markCompleted(ctx.watchLog, key, video.videoId));
-        destroyed = true;
-        ytPlayer?.destroy?.();
+        teardown();
         ctx.showVideoEnded(topic.id);
       }
     },
     onError: (code, message) => {
       if (destroyed) return;
       ctx.logPlayerError({ videoId: video.videoId, code, message, at: new Date().toISOString() });
-      destroyed = true;
-      stopTicking();
+      teardown();
       ctx.showPlaybackError(topic.id, message);
     },
   });
 
-  return () => {
-    if (destroyed) return;
-    destroyed = true;
-    stopTicking();
-    ytPlayer?.destroy?.();
-  };
+  return teardown;
 }
 
 export { render, renderMessageScreen };

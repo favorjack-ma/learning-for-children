@@ -17,6 +17,7 @@ function createControlsBar({
   onToggleRate,
   onToggleCaptions,
   onToggleFullscreen,
+  onSkipAd,
   onExit,
 }) {
   const root = document.createElement("div");
@@ -99,7 +100,13 @@ function createControlsBar({
   fullscreenBtn.textContent = "⛶ 전체화면";
   fullscreenBtn.addEventListener("click", onToggleFullscreen);
 
-  secondaryRow.append(rateBtn, captionsBtn, fullscreenBtn);
+  const skipAdBtn = document.createElement("button");
+  skipAdBtn.className = "chip-btn";
+  skipAdBtn.type = "button";
+  skipAdBtn.textContent = "⏭ 광고 건너뛰기";
+  skipAdBtn.addEventListener("click", onSkipAd);
+
+  secondaryRow.append(rateBtn, captionsBtn, fullscreenBtn, skipAdBtn);
 
   root.append(progressRow, controlsRow, secondaryRow);
 

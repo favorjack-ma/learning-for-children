@@ -237,6 +237,10 @@ button {
   flex-direction: column;
   padding: 0;
   background: #000;
+  /* Starts at a comfortable medium size rather than filling the whole
+     screen; the ⛶ 전체화면 button expands it via the real Fullscreen API. */
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .player-frame-wrap {
@@ -244,6 +248,13 @@ button {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
+}
+
+.player-frame-wrap:fullscreen,
+.player-frame-wrap:-webkit-full-screen {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: auto;
 }
 
 .player-frame-wrap iframe {
@@ -262,9 +273,11 @@ button {
      suggestions are visible but not clickable. */
 }
 
-.player-overlay.ad-mode {
-  /* While a pre-roll ad is detected, let taps through so the skip button
-     (rendered by YouTube inside the iframe) is actually reachable. */
+.player-overlay.ad-mode,
+.player-overlay.manual-unlock {
+  /* ad-mode: duration-based ad detection fired. manual-unlock: the parent
+     tapped "광고 건너뛰기" to open a short window for reaching YouTube's own
+     skip button — no permanent hole, just a timed, deliberate exception. */
   pointer-events: none;
 }
 
