@@ -7,7 +7,7 @@ import { getTodayDateKey, isLimitReached } from "../time-limit.js";
 
 const TICK_MS = 1000;
 const RATE_STEPS = [0.75, 1];
-const MANUAL_UNLOCK_MS = 6000;
+const MANUAL_UNLOCK_MS = 20000;
 
 function renderMessageScreen(container, { emoji, title, message, actionLabel, onAction }) {
   container.innerHTML = "";
