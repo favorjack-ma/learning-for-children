@@ -77,6 +77,7 @@ function render(container, ctx) {
 
   function skipAd() {
     overlay.classList.add("manual-unlock");
+    frameWrap.classList.add("unlocked");
     clearTimeout(manualUnlockTimer);
     manualUnlockTimer = setTimeout(relockManualUnlock, MANUAL_UNLOCK_MS);
   }
@@ -85,6 +86,7 @@ function render(container, ctx) {
     clearTimeout(manualUnlockTimer);
     manualUnlockTimer = null;
     overlay.classList.remove("manual-unlock");
+    frameWrap.classList.remove("unlocked");
   }
 
   const controls = createControlsBar({
