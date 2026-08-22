@@ -1,13 +1,12 @@
 import { el } from "../dom-utils.js";
 import { createPlayer, PLAYER_STATE } from "../player/yt-player.js";
 import { createControlsBar } from "../player/controls.js";
-import { isLikelyAd, isConfirmedRealContent } from "../player/ad-detection.js";
+import { isLikelyAd } from "../player/ad-detection.js";
 import { addWatchSeconds, markCompleted } from "../watch-log.js";
 import { getTodayDateKey, isLimitReached } from "../time-limit.js";
 
 const TICK_MS = 1000;
 const RATE_STEPS = [0.75, 1];
-const MANUAL_UNLOCK_MS = 20000;
 
 function renderMessageScreen(container, { emoji, title, message, actionLabel, onAction }) {
   container.innerHTML = "";
@@ -66,28 +65,10 @@ function render(container, ctx) {
   let ytPlayer = null;
   let destroyed = false;
   let lastTickAt = null;
+  // Ads can't be reliably skipped from outside YouTube's iframe (tried and
+  // abandoned — see git history), so this only gates quota-counting below:
+  // ad-watching time shouldn't deduct from the daily limit.
   let inAdMode = false;
-  let manualUnlockTimer = null;
-
-  function setAdMode(isAd) {
-    if (isAd === inAdMode) return;
-    inAdMode = isAd;
-    overlay.classList.toggle("ad-mode", isAd);
-  }
-
-  function skipAd() {
-    overlay.classList.add("manual-unlock");
-    frameWrap.classList.add("unlocked");
-    clearTimeout(manualUnlockTimer);
-    manualUnlockTimer = setTimeout(relockManualUnlock, MANUAL_UNLOCK_MS);
-  }
-
-  function relockManualUnlock() {
-    clearTimeout(manualUnlockTimer);
-    manualUnlockTimer = null;
-    overlay.classList.remove("manual-unlock");
-    frameWrap.classList.remove("unlocked");
-  }
 
   const controls = createControlsBar({
     onTogglePlay: () => {
@@ -134,7 +115,6 @@ function render(container, ctx) {
         frameWrap.requestFullscreen?.();
       }
     },
-    onSkipAd: () => skipAd(),
     onExit: () => exitToList(),
   });
   view.appendChild(controls.root);
@@ -180,15 +160,7 @@ function render(container, ctx) {
     const duration = ytPlayer.getDuration?.() ?? 0;
     controls.setProgress(current, duration);
 
-    const looksLikeAd = isLikelyAd(duration, video.durationSec);
-    setAdMode(looksLikeAd);
-
-    // Re-lock early only once real content is positively confirmed —
-    // closing the corner cutout the moment the ad has actually ended
-    // instead of waiting out the full manual-unlock window.
-    if (manualUnlockTimer !== null && isConfirmedRealContent(duration, video.durationSec)) {
-      relockManualUnlock();
-    }
+    inAdMode = isLikelyAd(duration, video.durationSec);
 
     requestAnimationFrame(progressLoop);
   }
@@ -196,7 +168,6 @@ function render(container, ctx) {
   function teardown() {
     if (destroyed) return;
     destroyed = true;
-    clearTimeout(manualUnlockTimer);
     stopTicking();
     ytPlayer?.destroy?.();
   }
