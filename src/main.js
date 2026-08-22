@@ -109,8 +109,7 @@ async function main() {
     },
     getTodayDateKey,
     navigate(nextRoute) {
-      route = nextRoute;
-      renderCurrentView();
+      setRoute(nextRoute);
     },
     setHeader({ title, showBack, onBack }) {
       titleEl.textContent = title;
@@ -157,18 +156,32 @@ async function main() {
       storage.appendErrorLog(entry);
     },
     showLimitReached() {
-      route = { view: "limit-reached" };
-      renderCurrentView();
+      setRoute({ view: "limit-reached" });
     },
     showVideoEnded(topicId) {
-      route = { view: "video-ended", topicId };
-      renderCurrentView();
+      setRoute({ view: "video-ended", topicId });
     },
     showPlaybackError(topicId, message) {
-      route = { view: "playback-error", topicId, message };
-      renderCurrentView();
+      setRoute({ view: "playback-error", topicId, message });
     },
   };
+
+  // Every screen change pushes a real history entry so the tablet's Android
+  // back button/gesture steps back through our screens (player → videos →
+  // topics) instead of leaving the app entirely, which has no history entry
+  // of its own to fall back to otherwise.
+  function setRoute(nextRoute) {
+    route = nextRoute;
+    history.pushState(route, "");
+    renderCurrentView();
+  }
+
+  history.replaceState(route, ""); // attach the initial route to the page's own load entry
+
+  window.addEventListener("popstate", (event) => {
+    route = event.state ?? { view: "topics" };
+    renderCurrentView();
+  });
 
   function renderCurrentView() {
     currentDestroy?.();

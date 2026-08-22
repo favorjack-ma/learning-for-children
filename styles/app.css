@@ -277,8 +277,11 @@ button {
 .player-overlay.manual-unlock {
   /* ad-mode: duration-based ad detection fired. manual-unlock: the parent
      tapped "광고 건너뛰기" to open a short window for reaching YouTube's own
-     skip button — no permanent hole, just a timed, deliberate exception. */
-  pointer-events: none;
+     skip button. Only carves out the bottom-right corner (where the skip
+     button lives) instead of the whole surface — opening everything let a
+     stray tap during that window land on the YouTube logo on the real
+     video once the ad had already ended underneath. */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 78%, 60% 78%, 60% 100%, 0% 100%);
 }
 
 .player-controls {

@@ -78,10 +78,13 @@ function render(container, ctx) {
   function skipAd() {
     overlay.classList.add("manual-unlock");
     clearTimeout(manualUnlockTimer);
-    manualUnlockTimer = setTimeout(() => {
-      overlay.classList.remove("manual-unlock");
-      manualUnlockTimer = null;
-    }, MANUAL_UNLOCK_MS);
+    manualUnlockTimer = setTimeout(relockManualUnlock, MANUAL_UNLOCK_MS);
+  }
+
+  function relockManualUnlock() {
+    clearTimeout(manualUnlockTimer);
+    manualUnlockTimer = null;
+    overlay.classList.remove("manual-unlock");
   }
 
   const controls = createControlsBar({
@@ -175,7 +178,15 @@ function render(container, ctx) {
     const duration = ytPlayer.getDuration?.() ?? 0;
     controls.setProgress(current, duration);
 
-    setAdMode(isLikelyAd(duration, video.durationSec));
+    const looksLikeAd = isLikelyAd(duration, video.durationSec);
+    setAdMode(looksLikeAd);
+
+    // The ad ended (real content's duration is now reported) before the
+    // manual-unlock timer ran out — close the corner cutout right away
+    // instead of leaving it exposed over the real video for the remainder.
+    if (manualUnlockTimer !== null && !looksLikeAd) {
+      relockManualUnlock();
+    }
 
     requestAnimationFrame(progressLoop);
   }
