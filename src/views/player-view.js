@@ -1,6 +1,7 @@
 import { el } from "../dom-utils.js";
 import { createPlayer, PLAYER_STATE } from "../player/yt-player.js";
 import { createControlsBar } from "../player/controls.js";
+import { isLikelyAd } from "../player/ad-detection.js";
 import { addWatchSeconds, markCompleted } from "../watch-log.js";
 import { getTodayDateKey, isLimitReached } from "../time-limit.js";
 
@@ -64,6 +65,13 @@ function render(container, ctx) {
   let ytPlayer = null;
   let destroyed = false;
   let lastTickAt = null;
+  let inAdMode = false;
+
+  function setAdMode(isAd) {
+    if (isAd === inAdMode) return;
+    inAdMode = isAd;
+    overlay.classList.toggle("ad-mode", isAd);
+  }
 
   const controls = createControlsBar({
     onTogglePlay: () => {
@@ -122,6 +130,7 @@ function render(container, ctx) {
     const elapsedSec = Math.round((Date.now() - lastTickAt) / 1000);
     lastTickAt = Date.now();
     if (elapsedSec <= 0) return;
+    if (inAdMode) return; // don't deduct ad-watching time from the daily limit
 
     const key = getTodayDateKey();
     const updatedLog = addWatchSeconds(ctx.watchLog, key, video.videoId, elapsedSec);
@@ -153,6 +162,9 @@ function render(container, ctx) {
     const current = ytPlayer.getCurrentTime?.() ?? 0;
     const duration = ytPlayer.getDuration?.() ?? 0;
     controls.setProgress(current, duration);
+
+    setAdMode(isLikelyAd(duration, video.durationSec));
+
     requestAnimationFrame(progressLoop);
   }
 
