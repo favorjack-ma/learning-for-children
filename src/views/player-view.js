@@ -66,15 +66,26 @@ function render(container, ctx) {
   let destroyed = false;
   let lastTickAt = null;
   // Ads can't be reliably skipped from outside YouTube's iframe (tried and
-  // abandoned — see git history), so this only gates quota-counting below:
-  // ad-watching time shouldn't deduct from the daily limit.
+  // abandoned — see git history). While one is suspected, the overlay opens
+  // (see setAdMode below) so ads can still be paused/tapped, and ad-watching
+  // time doesn't deduct from the daily limit.
   let inAdMode = false;
+  // Tracked from our own onStateChange events rather than re-querying
+  // ytPlayer.getPlayerState() on every toggle — during ads that call can
+  // report a stale/unexpected state, which made the play/pause button
+  // sometimes fire the wrong action.
+  let isPlayingNow = false;
+
+  function setAdMode(isAd) {
+    if (isAd === inAdMode) return;
+    inAdMode = isAd;
+    overlay.classList.toggle("ad-mode", isAd);
+  }
 
   const controls = createControlsBar({
     onTogglePlay: () => {
       if (!ytPlayer) return;
-      const state = ytPlayer.getPlayerState();
-      if (state === PLAYER_STATE.PLAYING) ytPlayer.pauseVideo();
+      if (isPlayingNow) ytPlayer.pauseVideo();
       else ytPlayer.playVideo();
     },
     onSeekRelative: (delta) => {
@@ -160,7 +171,7 @@ function render(container, ctx) {
     const duration = ytPlayer.getDuration?.() ?? 0;
     controls.setProgress(current, duration);
 
-    inAdMode = isLikelyAd(duration, video.durationSec);
+    setAdMode(isLikelyAd(duration, video.durationSec));
 
     requestAnimationFrame(progressLoop);
   }
@@ -197,12 +208,15 @@ function render(container, ctx) {
     onStateChange: (state) => {
       if (destroyed) return;
       if (state === PLAYER_STATE.PLAYING) {
+        isPlayingNow = true;
         controls.setPlaying(true);
         startTicking();
       } else if (state === PLAYER_STATE.PAUSED || state === PLAYER_STATE.BUFFERING) {
+        isPlayingNow = false;
         controls.setPlaying(false);
         stopTicking();
       } else if (state === PLAYER_STATE.ENDED) {
+        isPlayingNow = false;
         controls.setPlaying(false);
         const key = getTodayDateKey();
         ctx.updateWatchLog(markCompleted(ctx.watchLog, key, video.videoId));

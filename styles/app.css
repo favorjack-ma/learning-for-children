@@ -270,7 +270,15 @@ button {
   inset: 0;
   background: transparent;
   /* Sits above the YouTube iframe so its logo, title, and end-screen
-     suggestions are visible but not clickable. */
+     suggestions are visible but not clickable during real content. */
+}
+
+.player-overlay.ad-mode {
+  /* Opens up only while an ad is suspected (duration-based heuristic —
+     imperfect, but errs toward staying locked), so a long/back-to-back ad
+     can still be paused or interacted with. Never opens during confirmed
+     real content. */
+  pointer-events: none;
 }
 
 
