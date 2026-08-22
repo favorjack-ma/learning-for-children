@@ -1,7 +1,7 @@
 import { el } from "../dom-utils.js";
 import { createPlayer, PLAYER_STATE } from "../player/yt-player.js";
 import { createControlsBar } from "../player/controls.js";
-import { isLikelyAd } from "../player/ad-detection.js";
+import { isLikelyAd, isConfirmedRealContent } from "../player/ad-detection.js";
 import { addWatchSeconds, markCompleted } from "../watch-log.js";
 import { getTodayDateKey, isLimitReached } from "../time-limit.js";
 
@@ -181,10 +181,10 @@ function render(container, ctx) {
     const looksLikeAd = isLikelyAd(duration, video.durationSec);
     setAdMode(looksLikeAd);
 
-    // The ad ended (real content's duration is now reported) before the
-    // manual-unlock timer ran out — close the corner cutout right away
-    // instead of leaving it exposed over the real video for the remainder.
-    if (manualUnlockTimer !== null && !looksLikeAd) {
+    // Re-lock early only once real content is positively confirmed —
+    // closing the corner cutout the moment the ad has actually ended
+    // instead of waiting out the full manual-unlock window.
+    if (manualUnlockTimer !== null && isConfirmedRealContent(duration, video.durationSec)) {
       relockManualUnlock();
     }
 

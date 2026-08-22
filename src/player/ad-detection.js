@@ -11,4 +11,16 @@ function isLikelyAd(reportedDurationSec, expectedDurationSec, toleranceSec = 5) 
   return Math.abs(reportedDurationSec - expectedDurationSec) > toleranceSec;
 }
 
-export { isLikelyAd };
+/**
+ * True only with POSITIVE confirmation the real content is playing — not
+ * merely "isLikelyAd says false", which is also true while the duration is
+ * still unknown/0 (e.g. an ad that hasn't reported its own duration yet).
+ * Conflating those two used to make the manual ad-skip unlock re-lock
+ * within a frame of being pressed, because a still-loading ad's duration
+ * (0) looked exactly like "not an ad" to isLikelyAd.
+ */
+function isConfirmedRealContent(reportedDurationSec, expectedDurationSec, toleranceSec = 5) {
+  return reportedDurationSec > 0 && !isLikelyAd(reportedDurationSec, expectedDurationSec, toleranceSec);
+}
+
+export { isLikelyAd, isConfirmedRealContent };
