@@ -122,24 +122,6 @@
               "durationSec": 303,
               "approved": true,
               "verifiedAt": "2026-08-22"
-            },
-            {
-              "videoId": "ioBjYhmANaU",
-              "title": "George Washington Crosses the Delaware | American Revolution Made Easy | Battle of Trenton",
-              "channel": "Bedtime History",
-              "lang": "en",
-              "durationSec": 272,
-              "approved": true,
-              "verifiedAt": "2026-08-22"
-            },
-            {
-              "videoId": "3lXnfitSoYw",
-              "title": "Biography of George Washington for Kids: Meet the American President - FreeSchool",
-              "channel": "Free School",
-              "lang": "en",
-              "durationSec": 294,
-              "approved": true,
-              "verifiedAt": "2026-08-22"
             }
           ]
         },
@@ -344,10 +326,33 @@
     {
       "id": "american-civil-war",
       "profile": "형",
-      "title": "미국 남북전쟁",
+      "title": "미국사: 독립전쟁과 남북전쟁",
       "subtitle": "TOEFL 리딩 배경지식",
-      "emoji": "⚖️",
+      "emoji": "🇺🇸",
       "sections": [
+        {
+          "label": "독립전쟁·워싱턴",
+          "videos": [
+            {
+              "videoId": "ioBjYhmANaU",
+              "title": "George Washington Crosses the Delaware | American Revolution Made Easy | Battle of Trenton",
+              "channel": "Bedtime History",
+              "lang": "en",
+              "durationSec": 272,
+              "approved": true,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "3lXnfitSoYw",
+              "title": "Biography of George Washington for Kids: Meet the American President - FreeSchool",
+              "channel": "Free School",
+              "lang": "en",
+              "durationSec": 294,
+              "approved": true,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        },
         {
           "label": "남북전쟁",
           "videos": [
