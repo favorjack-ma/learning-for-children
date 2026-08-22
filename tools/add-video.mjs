@@ -5,12 +5,14 @@
  * before it shows up on the child's screen.
  *
  * Usage:
- *   node tools/add-video.mjs --new-topic "우주 탐사" --emoji 🚀 --section "1단계 · 한국어" --lang ko <url>
+ *   node tools/add-video.mjs --new-topic "우주 탐사" --child 동생 --emoji 🚀 --section "1단계 · 한국어" --lang ko <url>
  *   node tools/add-video.mjs --topic civil-revolutions --section "2단계 · 영어" --lang en <url>
  *
  * Flags:
  *   --topic <id>        Add into an existing topic (must already exist)
  *   --new-topic <title> Create a new topic with this title
+ *   --child <name>      Which child's topic this is (only used with --new-topic) [required with --new-topic]
+ *                        Registers a new profile automatically if this name hasn't been used before.
  *   --id <slug>         Explicit topic id (only used with --new-topic)
  *   --emoji <emoji>     Topic emoji (only used with --new-topic)
  *   --subtitle <text>   Topic subtitle (only used with --new-topic)
@@ -41,6 +43,9 @@ function parseArgs(argv) {
         break;
       case "--new-topic":
         args.newTopic = argv[++i];
+        break;
+      case "--child":
+        args.child = argv[++i];
         break;
       case "--id":
         args.id = argv[++i];
@@ -86,6 +91,7 @@ async function main() {
   if (args.topic && args.newTopic) return fail("pass only one of --topic or --new-topic, not both");
   if (!args.section) return fail("--section <label> is required");
   if (!args.lang || !["ko", "en"].includes(args.lang)) return fail("--lang must be 'ko' or 'en'");
+  if (args.newTopic && !args.child) return fail("--child <name> is required with --new-topic");
 
   const videoId = extractVideoId(args.url);
   if (!videoId) return fail(`could not extract a YouTube video id from "${args.url}"`);
@@ -127,6 +133,7 @@ async function main() {
   try {
     updated = upsertVideo(data, {
       topicId,
+      topicProfile: args.child,
       topicTitle: args.newTopic,
       topicEmoji: args.emoji,
       topicSubtitle: args.subtitle,
@@ -144,8 +151,9 @@ async function main() {
 
   await writeFile(topicsFile, `${JSON.stringify(updated, null, 2)}\n`, "utf8");
 
+  const topicProfile = updated.topics.find((t) => t.id === topicId)?.profile;
   console.log(`✔ Added "${video.title}" (${video.channel}, ${video.durationSec}s)`);
-  console.log(`  topic: ${topicId} | section: "${args.section}" | lang: ${args.lang}`);
+  console.log(`  topic: ${topicId} (${topicProfile}) | section: "${args.section}" | lang: ${args.lang}`);
   console.log(
     args.approve
       ? "  status: approved (visible to child immediately)"

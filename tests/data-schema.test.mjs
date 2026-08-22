@@ -19,9 +19,11 @@ function validData(overrides = {}) {
   return {
     schemaVersion: 1,
     settings: { dailyLimitMinutes: 40, parentPinSet: false },
+    profiles: ["형", "동생"],
     topics: [
       {
         id: "civil-revolutions",
+        profile: "형",
         title: "시민혁명",
         sections: [{ label: "1단계", videos: [validVideo()] }],
       },
@@ -68,11 +70,34 @@ test("validateTopicsData rejects missing settings.dailyLimitMinutes", () => {
   assert.throws(() => validateTopicsData(data), DataValidationError);
 });
 
+test("validateTopicsData rejects a topic whose profile isn't in root.profiles", () => {
+  const data = validData();
+  data.topics[0].profile = "누군가";
+  assert.throws(() => validateTopicsData(data), /not listed in root\.profiles/);
+});
+
+test("validateTopicsData rejects a topic with no profile", () => {
+  const data = validData();
+  delete data.topics[0].profile;
+  assert.throws(() => validateTopicsData(data), DataValidationError);
+});
+
+test("validateTopicsData rejects duplicate entries in root.profiles", () => {
+  const data = validData({ profiles: ["형", "형"] });
+  assert.throws(() => validateTopicsData(data), /must not contain duplicates/);
+});
+
+test("validateTopicsData accepts a topic for any listed profile, including one with no topics yet", () => {
+  const data = validData();
+  assert.doesNotThrow(() => validateTopicsData(data));
+});
+
 test("filterApproved drops unapproved videos and empties sections/topics accordingly", () => {
   const data = validData();
   data.topics[0].sections[0].videos.push(validVideo({ videoId: "IIDfZ-8o4jE", approved: false }));
   data.topics.push({
     id: "space",
+    profile: "동생",
     title: "우주",
     sections: [{ label: "1단계", videos: [validVideo({ videoId: "xZSDBIXDaiU", approved: false })] }],
   });

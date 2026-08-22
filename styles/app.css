@@ -79,6 +79,31 @@ button {
   overflow-y: auto;
 }
 
+/* ---- Profile switcher ---- */
+.profile-switcher {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-btn {
+  flex: 1;
+  min-height: var(--touch-min);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-btn[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
 /* ---- Topic grid ---- */
 .topic-grid {
   display: grid;

@@ -9,6 +9,7 @@ const KEYS = {
   approvals: "lfc.approvals.v1",
   settings: "lfc.settings.v1",
   errorLog: "lfc.errors.v1",
+  selectedProfile: "lfc.selectedProfile.v1",
 };
 
 const MAX_ERROR_LOG_ENTRIES = 50;
@@ -62,6 +63,15 @@ function clearErrorLog() {
   localStorage.setItem(KEYS.errorLog, JSON.stringify([]));
 }
 
+/** Which child's profile was last selected on the topics screen, if any. */
+function loadSelectedProfile() {
+  return safeParse(localStorage.getItem(KEYS.selectedProfile), null);
+}
+
+function saveSelectedProfile(profileName) {
+  localStorage.setItem(KEYS.selectedProfile, JSON.stringify(profileName));
+}
+
 export {
   loadWatchLog,
   saveWatchLog,
@@ -72,4 +82,6 @@ export {
   loadErrorLog,
   appendErrorLog,
   clearErrorLog,
+  loadSelectedProfile,
+  saveSelectedProfile,
 };

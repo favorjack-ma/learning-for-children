@@ -59,6 +59,10 @@ async function main() {
   let watchLog = storage.loadWatchLog();
   let approvalOverrides = storage.loadApprovalOverrides();
   let settings = storage.loadSettings();
+  let selectedProfile = storage.loadSelectedProfile();
+  if (!selectedProfile || !data.profiles.includes(selectedProfile)) {
+    selectedProfile = data.profiles[0];
+  }
   let route = { view: "topics" };
   let currentDestroy = null;
 
@@ -88,6 +92,14 @@ async function main() {
     },
     get dailyLimitMinutes() {
       return settings.dailyLimitMinutes ?? data.settings.dailyLimitMinutes;
+    },
+    get selectedProfile() {
+      return selectedProfile;
+    },
+    setSelectedProfile(profileName) {
+      selectedProfile = profileName;
+      storage.saveSelectedProfile(selectedProfile);
+      renderCurrentView();
     },
     getVisibleData() {
       return filterApproved(withEffectiveApproval(data, approvalOverrides));

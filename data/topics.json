@@ -4,9 +4,14 @@
     "dailyLimitMinutes": 40,
     "parentPinSet": false
   },
+  "profiles": [
+    "형",
+    "동생"
+  ],
   "topics": [
     {
       "id": "civil-revolutions",
+      "profile": "형",
       "title": "시민혁명",
       "subtitle": "TOEFL 리딩 배경지식",
       "emoji": "🏛️",
@@ -147,6 +152,7 @@
     },
     {
       "id": "world-wars",
+      "profile": "형",
       "title": "세계대전",
       "subtitle": "20세기 세계사",
       "emoji": "⚔️",

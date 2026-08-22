@@ -38,11 +38,16 @@ function validateSection(section, path) {
   section.videos.forEach((video, index) => validateVideo(video, `${path}.videos[${index}]`));
 }
 
-function validateTopic(topic, path, seenIds) {
+function validateTopic(topic, path, seenIds, profiles) {
   assert(topic && typeof topic === "object", `${path}: topic must be an object`);
   assert(typeof topic.id === "string" && topic.id.length > 0, `${path}: id is required`);
   assert(!seenIds.has(topic.id), `${path}: duplicate topic id "${topic.id}"`);
   seenIds.add(topic.id);
+  assert(typeof topic.profile === "string" && topic.profile.length > 0, `${path}: profile is required`);
+  assert(
+    profiles.has(topic.profile),
+    `${path}: profile "${topic.profile}" is not listed in root.profiles`
+  );
   assert(typeof topic.title === "string" && topic.title.length > 0, `${path}: title is required`);
   assert(Array.isArray(topic.sections), `${path}: sections must be an array`);
   topic.sections.forEach((section, index) => validateSection(section, `${path}.sections[${index}]`));
@@ -64,10 +69,20 @@ function validateTopicsData(data) {
     typeof data.settings.parentPinSet === "boolean",
     "root.settings.parentPinSet must be a boolean"
   );
+  assert(Array.isArray(data.profiles), "root.profiles must be an array");
+  assert(
+    data.profiles.every((name) => typeof name === "string" && name.length > 0),
+    "root.profiles must contain only non-empty strings"
+  );
+  assert(
+    new Set(data.profiles).size === data.profiles.length,
+    "root.profiles must not contain duplicates"
+  );
   assert(Array.isArray(data.topics), "root.topics must be an array");
 
+  const profiles = new Set(data.profiles);
   const seenIds = new Set();
-  data.topics.forEach((topic, index) => validateTopic(topic, `root.topics[${index}]`, seenIds));
+  data.topics.forEach((topic, index) => validateTopic(topic, `root.topics[${index}]`, seenIds, profiles));
 
   return data;
 }
