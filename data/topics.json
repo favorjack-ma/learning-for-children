@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "settings": {
+    "dailyLimitMinutes": 40,
+    "parentPinSet": false
+  },
+  "topics": [
+    {
+      "id": "civil-revolutions",
+      "title": "시민혁명",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🏛️",
+      "sections": [
+        {
+          "label": "1단계 · 한국어로 큰 그림",
+          "videos": [
+            {
+              "videoId": "Bk-RV3xtTBM",
+              "title": "진격의 나폴레옹! \"싸우는 건 내가 세계 NO 1\" | 프랑스 대혁명과 근대 유럽 시민혁명 | 초등 이야기 세계사 ★ 지니스쿨 역사 GeniSchool History",
+              "channel": "지니스쿨 역사 GeniSchool History",
+              "lang": "ko",
+              "durationSec": 254,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "-mthO4zdmSM",
+              "title": "영국, 프랑스, 미국의 남다른 시민혁명 클라스 (살벌함 주의 ㄷㄷ)",
+              "channel": "빅퀘스천 Big Questions",
+              "lang": "ko",
+              "durationSec": 938,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "3nK2C8HwfBg",
+              "title": "피 한 방울 없이 왕을 몰아냈던 영국의 '명예혁명' | 브레인 아카데미 4 회",
+              "channel": "play 채널A",
+              "lang": "ko",
+              "durationSec": 384,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "-AcccuTnnGQ",
+              "title": "[5분 역사] 미국의 탄생 배경, 미국혁명/미국독립전쟁의 전개 과정",
+              "channel": "박보라",
+              "lang": "ko",
+              "durationSec": 321,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "bk54SvIhN6U",
+              "title": "미국의 독립 혁명 한번에 다보기 (4분순삭ver.)",
+              "channel": "로빈의 역사 기록 / Robin's Historical Records",
+              "lang": "ko",
+              "durationSec": 264,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        },
+        {
+          "label": "2단계 · 영어로 다시 보기",
+          "videos": [
+            {
+              "videoId": "IIDfZ-8o4jE",
+              "title": "FRENCH REVOLUTION | Educational Video for Kids.",
+              "channel": "Happy Learning English",
+              "lang": "en",
+              "durationSec": 194,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "PBn7iWzrKoI",
+              "title": "What caused the French Revolution? - Tom Mullaney",
+              "channel": "TED-Ed",
+              "lang": "en",
+              "durationSec": 339,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "BWtW0gmh3kg",
+              "title": "The American Revolutionary War for Kids: Learn About the Revolutionary War for Children - FreeSchool",
+              "channel": "Free School",
+              "lang": "en",
+              "durationSec": 492,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "mXE1l_7ytG8",
+              "title": "The American Revolution for Kids | Learn the Causes and Facts About the American Revolution",
+              "channel": "Lesson Boosters - Kids Science and History Videos",
+              "lang": "en",
+              "durationSec": 300,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "WqAA0hgSBtQ",
+              "title": "Glorious Revolution & Bill of Rights (1688-1689)",
+              "channel": "History in Five",
+              "lang": "en",
+              "durationSec": 329,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "_PHhDuvnINU",
+              "title": "The Glorious Revolution Explained | England's Bloodless Revolution | DAILY BELLRINGER",
+              "channel": "The Daily Bellringer",
+              "lang": "en",
+              "durationSec": 303,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        },
+        {
+          "label": "심화 · 더 깊이 (선택)",
+          "videos": [
+            {
+              "videoId": "lTTvKwCylFY",
+              "title": "The French Revolution: Crash Course World History #29",
+              "channel": "CrashCourse",
+              "lang": "en",
+              "durationSec": 714,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            },
+            {
+              "videoId": "HlUiSBXQHCw",
+              "title": "Tea, Taxes, and The American Revolution: Crash Course World History #28",
+              "channel": "CrashCourse",
+              "lang": "en",
+              "durationSec": 687,
+              "approved": false,
+              "verifiedAt": "2026-08-22"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

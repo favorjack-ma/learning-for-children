@@ -1,0 +1,12 @@
+{
+  "name": "kids-learning-player",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "아빠가 승인한 영상만 볼 수 있는 아이 전용 학습 영상 플레이어",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "serve": "node tools/serve.mjs",
+    "verify": "node tools/verify-videos.mjs"
+  }
+}
