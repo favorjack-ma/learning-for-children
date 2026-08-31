@@ -505,6 +505,154 @@
           ]
         }
       ]
+    },
+    {
+      "id": "world-geography",
+      "profile": "형",
+      "title": "세계의 지형",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🌍",
+      "sections": [
+        {
+          "label": "강과 시내",
+          "videos": [
+            {
+              "videoId": "T5H3UyNBGMg",
+              "title": "World Rivers for Kids | What is the Largest River in the World?",
+              "channel": "Twinkl Educational Publishing",
+              "lang": "en",
+              "durationSec": 153,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            },
+            {
+              "videoId": "M3z4mgdM-IQ",
+              "title": "River - Life of a River | Body of Water | All About Rivers | Educational Videos For Kids | Science",
+              "channel": "OnlineClass4Kids",
+              "lang": "en",
+              "durationSec": 246,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "호주와 그린란드",
+          "videos": [
+            {
+              "videoId": "zmon5Tv6bYU",
+              "title": "All about Australia for Kids | Learn about the Australian continent and country",
+              "channel": "Learn Bright",
+              "lang": "en",
+              "durationSec": 530,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            },
+            {
+              "videoId": "oe2nArTdOsc",
+              "title": "Greenland Facts: Exploring the World's Largest Island",
+              "channel": "Discover the World with YMT",
+              "lang": "en",
+              "durationSec": 198,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "협곡",
+          "videos": [
+            {
+              "videoId": "zta2y7cAMDk",
+              "title": "Exploring the Grand Canyon for Children: Learn How the Grand Canyon was Formed for Kids - FreeSchool",
+              "channel": "Free School",
+              "lang": "en",
+              "durationSec": 353,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "남극과 북극",
+          "videos": [
+            {
+              "videoId": "b1h-9TSu4wE",
+              "title": "THE DIFFERENCE BETWEEN THE ARCTIC AND THE ANTARCTIC || SCIENCE VIDEO FOR KIDS",
+              "channel": "Make It Easy Education",
+              "lang": "en",
+              "durationSec": 226,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "사막",
+          "videos": [
+            {
+              "videoId": "CWEY0jD3Al0",
+              "title": "Antarctica Is A Desert? Antarctica For Kids",
+              "channel": "Hey! Guess What",
+              "lang": "en",
+              "durationSec": 484,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "산맥",
+          "videos": [
+            {
+              "videoId": "qqzWgBo7VwY",
+              "title": "HIMALAYAS – THE GUARD OF OUR NATION class-4",
+              "channel": "Digi Nurture",
+              "lang": "en",
+              "durationSec": 263,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "한국과 일본",
+          "videos": [
+            {
+              "videoId": "5d7sUsD-buA",
+              "title": "Japan's Geography explained in under 3 Minutes",
+              "channel": "FactSpark",
+              "lang": "en",
+              "durationSec": 180,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            },
+            {
+              "videoId": "-XI64Qp7weE",
+              "title": "North and South Korea - World Geography for Teens!",
+              "channel": "Miacademy & MiaPrep Learning Channel",
+              "lang": "en",
+              "durationSec": 743,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        },
+        {
+          "label": "툰드라",
+          "videos": [
+            {
+              "videoId": "fK6gBGeAaUI",
+              "title": "TUNDRA BIOME | What Is A Tundra Biome? | Tundra Region | The Dr Binocs Show | Peekaboo Kidz",
+              "channel": "Peekaboo Kidz",
+              "lang": "en",
+              "durationSec": 371,
+              "approved": true,
+              "verifiedAt": "2026-08-31"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
