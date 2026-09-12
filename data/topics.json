@@ -653,6 +653,177 @@
           ]
         }
       ]
+    },
+    {
+      "id": "education-system",
+      "profile": "형",
+      "title": "교육 제도",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🎓",
+      "sections": [
+        {
+          "label": "미국 공립학교와 사립학교",
+          "videos": [
+            {
+              "videoId": "9vOhWZzcVPY",
+              "title": "Types of Schools: Public -Private & Other Options in the U.S.",
+              "channel": "English with Jennifer",
+              "lang": "en",
+              "durationSec": 731,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "프뢰벨과 유치원의 시작",
+          "videos": [
+            {
+              "videoId": "lieFOzjLHM8",
+              "title": "Froebel’s Kindergarten: The Origins of Early Childhood Education",
+              "channel": "Sprouts",
+              "lang": "en",
+              "durationSec": 337,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "대학의 단과대학: 인문대와 공과대학",
+          "videos": [
+            {
+              "videoId": "_D13FbjQLrg",
+              "title": "Liberal arts explained in 101 seconds | 101 in 101",
+              "channel": "UC Berkeley",
+              "lang": "en",
+              "durationSec": 119,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            },
+            {
+              "videoId": "pkVIk-RGPpw",
+              "title": "What is an Engineer? | Squeaks has an Engineering Problem! | SciShow Kids",
+              "channel": "SciShow Kids",
+              "lang": "en",
+              "durationSec": 317,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "아이비리그와 명문대학",
+          "videos": [
+            {
+              "videoId": "eYgHjR17at0",
+              "title": "Ivy League Schools Explained in 2 Minutes",
+              "channel": "Study abroad — Studyportals",
+              "lang": "en",
+              "durationSec": 109,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "서양 최초의 대학",
+          "videos": [
+            {
+              "videoId": "R21zZxF3Rdo",
+              "title": "How the World's First Universities Were Born",
+              "channel": "Impactful Moments",
+              "lang": "en",
+              "durationSec": 875,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "TOEFL과 TOEIC 시험",
+          "videos": [
+            {
+              "videoId": "1LpVb3lYaKk",
+              "title": "TOEFL Exam | TOEFL Overview | Introduction",
+              "channel": "EduNirvana - Your Study Abroad Mentors",
+              "lang": "en",
+              "durationSec": 140,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            },
+            {
+              "videoId": "g4XUgz-aLp0",
+              "title": "What IS the TOEIC Test?",
+              "channel": "Westminster Elite - English Pronunciation",
+              "lang": "en",
+              "durationSec": 104,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "홈스쿨링",
+          "videos": [
+            {
+              "videoId": "NSY-6Ofz95I",
+              "title": "What is Homeschooling? | Homeschooling Information for Parents | Twinkl USA",
+              "channel": "Twinkl Teaching Resources - United States",
+              "lang": "en",
+              "durationSec": 310,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "고등교육의 여러 형태: 주니어칼리지와 대안교육",
+          "videos": [
+            {
+              "videoId": "MfT8nOy-SHI",
+              "title": "The Differences between Community Colleges and Universities",
+              "channel": "OutOfSkool TV",
+              "lang": "en",
+              "durationSec": 191,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            },
+            {
+              "videoId": "ct-E3hjIMgo",
+              "title": "What Is a Trade School  Simple Explanation for Anyone Considering the Skilled Trades",
+              "channel": "SkillCat",
+              "lang": "en",
+              "durationSec": 98,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        },
+        {
+          "label": "강의식 수업과 토론식 수업",
+          "videos": [
+            {
+              "videoId": "FjQPt7LIAYo",
+              "title": "What is a Lecture Class? // Definitions",
+              "channel": "From Nest To Wings",
+              "lang": "en",
+              "durationSec": 51,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            },
+            {
+              "videoId": "GB8zfxfoWi8",
+              "title": "The difference between a seminar and a lecture at university",
+              "channel": "PES TV Cardiff Met University",
+              "lang": "en",
+              "durationSec": 164,
+              "approved": false,
+              "verifiedAt": "2026-09-12"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
