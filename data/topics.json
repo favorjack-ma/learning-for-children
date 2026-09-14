@@ -670,7 +670,7 @@
               "channel": "English with Jennifer",
               "lang": "en",
               "durationSec": 731,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -684,7 +684,7 @@
               "channel": "Sprouts",
               "lang": "en",
               "durationSec": 337,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -698,7 +698,7 @@
               "channel": "UC Berkeley",
               "lang": "en",
               "durationSec": 119,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             },
             {
@@ -707,7 +707,7 @@
               "channel": "SciShow Kids",
               "lang": "en",
               "durationSec": 317,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -721,7 +721,7 @@
               "channel": "Study abroad — Studyportals",
               "lang": "en",
               "durationSec": 109,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -735,7 +735,7 @@
               "channel": "Impactful Moments",
               "lang": "en",
               "durationSec": 875,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -749,7 +749,7 @@
               "channel": "EduNirvana - Your Study Abroad Mentors",
               "lang": "en",
               "durationSec": 140,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             },
             {
@@ -758,7 +758,7 @@
               "channel": "Westminster Elite - English Pronunciation",
               "lang": "en",
               "durationSec": 104,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -772,7 +772,7 @@
               "channel": "Twinkl Teaching Resources - United States",
               "lang": "en",
               "durationSec": 310,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -786,7 +786,7 @@
               "channel": "OutOfSkool TV",
               "lang": "en",
               "durationSec": 191,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             },
             {
@@ -795,7 +795,7 @@
               "channel": "SkillCat",
               "lang": "en",
               "durationSec": 98,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
@@ -809,7 +809,7 @@
               "channel": "From Nest To Wings",
               "lang": "en",
               "durationSec": 51,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             },
             {
@@ -818,7 +818,7 @@
               "channel": "PES TV Cardiff Met University",
               "lang": "en",
               "durationSec": 164,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-12"
             }
           ]
