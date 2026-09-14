@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { validateTopicsData, filterApproved, DataValidationError } from "../src/data.js";
+import { validateTopicsData, filterApproved, loadTopics, DataValidationError } from "../src/data.js";
 
 function validVideo(overrides = {}) {
   return {
@@ -115,4 +115,22 @@ test("filterApproved does not mutate the input", () => {
   const originalVideoCount = data.topics[0].sections[0].videos.length;
   filterApproved(data);
   assert.equal(data.topics[0].sections[0].videos.length, originalVideoCount);
+});
+
+test("loadTopics bypasses the browser cache so a reopened app sees new approvals", async () => {
+  const calls = [];
+  const originalFetch = globalThis.fetch;
+  globalThis.fetch = async (url, init) => {
+    calls.push({ url, init });
+    return { ok: true, json: async () => validData() };
+  };
+  try {
+    await loadTopics("./data/topics.json");
+  } finally {
+    globalThis.fetch = originalFetch;
+  }
+
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, "./data/topics.json");
+  assert.equal(calls[0].init?.cache, "no-store");
 });

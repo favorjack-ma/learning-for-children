@@ -106,7 +106,10 @@ function filterApproved(data) {
 }
 
 async function loadTopics(url = "./data/topics.json") {
-  const response = await fetch(url);
+  // no-store because GitHub Pages serves topics.json with max-age=600: without
+  // it, a device that loaded the list in the last 10 minutes keeps showing the
+  // old one, so a video approved on the PC looks like it never arrived.
+  const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) {
     throw new DataValidationError(`failed to load ${url}: HTTP ${response.status}`);
   }

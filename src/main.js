@@ -256,6 +256,33 @@ async function main() {
     }
   }
 
+  // The tablet runs this as an installed app with no address bar, so there is
+  // no reload button to press. Coming back to the app IS the refresh: whenever
+  // it returns to the foreground we re-fetch the list, so a video approved on
+  // the PC shows up by switching away and back (or reopening from the home
+  // screen). Only the two list screens refresh — never mid-video, and never
+  // while a PIN is half-typed.
+  const REFRESHABLE_VIEWS = new Set(["topics", "videos"]);
+
+  document.addEventListener("visibilitychange", async () => {
+    if (document.visibilityState !== "visible") return;
+    if (!REFRESHABLE_VIEWS.has(route.view)) return;
+
+    let fresh;
+    try {
+      fresh = await loadTopics("./data/topics.json");
+    } catch {
+      return; // offline or a bad response: keep showing the list we already have
+    }
+
+    if (JSON.stringify(fresh) === JSON.stringify(data)) return;
+    data = fresh;
+    if (!data.profiles.includes(selectedProfile)) {
+      selectedProfile = data.profiles[0];
+    }
+    renderCurrentView();
+  });
+
   renderCurrentView();
 }
 
