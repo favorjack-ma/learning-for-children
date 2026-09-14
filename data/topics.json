@@ -679,7 +679,7 @@
               "channel": " 제니에듀 미국대학입시 컨설팅 | 하버드맘",
               "lang": "ko",
               "durationSec": 623,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-14"
             }
           ]
@@ -753,7 +753,7 @@
               "channel": "TWS Cut",
               "lang": "ko",
               "durationSec": 145,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-14"
             },
             {
@@ -762,7 +762,7 @@
               "channel": "함께하는 세계사",
               "lang": "ko",
               "durationSec": 631,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-14"
             }
           ]
@@ -794,7 +794,7 @@
               "channel": "인라이즈 (iNRISE) - TOEFL / GRE ",
               "lang": "ko",
               "durationSec": 261,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-14"
             }
           ]
@@ -840,7 +840,7 @@
               "channel": "샤튜브, 유학에 관한 모든 컨텐츠",
               "lang": "ko",
               "durationSec": 425,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-14"
             }
           ]
