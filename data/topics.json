@@ -886,7 +886,7 @@
               "channel": "세금내는아이들",
               "lang": "ko",
               "durationSec": 76,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -895,7 +895,7 @@
               "channel": "Happy Learning English",
               "lang": "en",
               "durationSec": 307,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -909,7 +909,7 @@
               "channel": "EBSDocumentary (EBS 다큐)",
               "lang": "ko",
               "durationSec": 1184,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -918,7 +918,7 @@
               "channel": "Korczyk's Class",
               "lang": "en",
               "durationSec": 299,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -932,7 +932,7 @@
               "channel": "한국은행",
               "lang": "ko",
               "durationSec": 275,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -941,7 +941,7 @@
               "channel": "Happy Learning English",
               "lang": "en",
               "durationSec": 1263,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -955,7 +955,7 @@
               "channel": "KB여의도5번출구",
               "lang": "ko",
               "durationSec": 62,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -964,7 +964,7 @@
               "channel": "LearningMole",
               "lang": "en",
               "durationSec": 282,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -978,7 +978,7 @@
               "channel": "로빈의 역사 기록 / Robin's Historical Records",
               "lang": "ko",
               "durationSec": 300,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -987,7 +987,7 @@
               "channel": "Learn Bright",
               "lang": "en",
               "durationSec": 713,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -1001,7 +1001,7 @@
               "channel": "마크의 지식서재",
               "lang": "ko",
               "durationSec": 326,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -1015,7 +1015,7 @@
               "channel": "Easy Peasy Finance",
               "lang": "en",
               "durationSec": 262,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
@@ -1029,7 +1029,7 @@
               "channel": "재정경제부",
               "lang": "ko",
               "durationSec": 147,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             },
             {
@@ -1038,7 +1038,7 @@
               "channel": "Fresberg Cartoon – Learning & History for Students",
               "lang": "en",
               "durationSec": 161,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-09-19"
             }
           ]
