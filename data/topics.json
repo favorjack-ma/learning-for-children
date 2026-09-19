@@ -869,6 +869,181 @@
           ]
         }
       ]
+    },
+    {
+      "id": "economics",
+      "profile": "형",
+      "title": "경제",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "💰",
+      "sections": [
+        {
+          "label": "세금",
+          "videos": [
+            {
+              "videoId": "bhm08qUddso",
+              "title": "돈으로 움직이는 초등학교 교실 이야기(세금내는 아이들)",
+              "channel": "세금내는아이들",
+              "lang": "ko",
+              "durationSec": 76,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "KeC5g3acjJM",
+              "title": "WHAT ARE TAXES?  | Educational Videos for Kids",
+              "channel": "Happy Learning English",
+              "lang": "en",
+              "durationSec": 307,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "애덤 스미스와 자유시장",
+          "videos": [
+            {
+              "videoId": "0Z6Ue_Q6_Tk",
+              "title": "성서 이래 가장 위대한 책의 탄생, 애덤 스미스의 『국부론』 | 경제학의 아버지 애덤 스미스가 꿈꾸었던 세상 | 다큐프라임 - 자본주의ㅣ#골라듄다큐",
+              "channel": "EBSDocumentary (EBS 다큐)",
+              "lang": "ko",
+              "durationSec": 1184,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "tciWE7gorN0",
+              "title": "Adam Smith and the Invisible Hand Theory Explained",
+              "channel": "Korczyk's Class",
+              "lang": "en",
+              "durationSec": 299,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "화폐의 역사와 종류",
+          "videos": [
+            {
+              "videoId": "BeRwr2sWxQ8",
+              "title": "1편. 화폐의 역사 대탐험! 돈은 어떻게 만들어졌을까? | 신석기부터 디지털 화폐까지 총정리🔥",
+              "channel": "한국은행",
+              "lang": "ko",
+              "durationSec": 275,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "fcrQHC3jRsA",
+              "title": "The History of Money: From Bartering to Banknotes 💰 Economy for Kids | @HappyLearningENG",
+              "channel": "Happy Learning English",
+              "lang": "en",
+              "durationSec": 1263,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "대출과 이자",
+          "videos": [
+            {
+              "videoId": "wtbP0Uy5wdE",
+              "title": "돈을 맡기면 왜 이자를 줄까? 예금, 대출금리의 개념과 원리",
+              "channel": "KB여의도5번출구",
+              "lang": "ko",
+              "durationSec": 62,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "d-mKp1qZjek",
+              "title": "What is Compound Interest? | Compound Interest for Kids |Financial Education for Kids | Kids Finance",
+              "channel": "LearningMole",
+              "lang": "en",
+              "durationSec": 282,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "경기침체와 대공황",
+          "videos": [
+            {
+              "videoId": "8nkd6bSFjgs",
+              "title": "대공황의 모든 것! 1929 세계 경제 위기와 뉴딜 정책까지 한눈에 정리 l 유럽 역사 29부 대공황",
+              "channel": "로빈의 역사 기록 / Robin's Historical Records",
+              "lang": "ko",
+              "durationSec": 300,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "surDj9s2BG8",
+              "title": "The Great Depression for Kids | How did it start? Learn all about the Great Depression",
+              "channel": "Learn Bright",
+              "lang": "en",
+              "durationSec": 713,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "경제체제: 자본주의와 사회주의",
+          "videos": [
+            {
+              "videoId": "ufMVOkfeWJU",
+              "title": "초등학생도 이해하는 민주주의, 공산주의, 사회주의, 자본주의 차이점",
+              "channel": "마크의 지식서재",
+              "lang": "ko",
+              "durationSec": 326,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "주식",
+          "videos": [
+            {
+              "videoId": "bJg-rF3bLH0",
+              "title": "What are Stocks? A Simple Explanation for Kids and Beginners",
+              "channel": "Easy Peasy Finance",
+              "lang": "en",
+              "durationSec": 262,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        },
+        {
+          "label": "수요와 공급",
+          "videos": [
+            {
+              "videoId": "AoVhcRCr4y4",
+              "title": "[어린이 경제교실] 2. 시장과 가격_수요와 공급 편",
+              "channel": "재정경제부",
+              "lang": "ko",
+              "durationSec": 147,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            },
+            {
+              "videoId": "-qHfo8rGqv0",
+              "title": "Supply and Demand (Economics Cartoon for Kids) Educational Video for Students (CN)",
+              "channel": "Fresberg Cartoon – Learning & History for Students",
+              "lang": "en",
+              "durationSec": 161,
+              "approved": false,
+              "verifiedAt": "2026-09-19"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
