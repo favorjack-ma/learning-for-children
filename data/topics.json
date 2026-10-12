@@ -1044,6 +1044,229 @@
           ]
         }
       ]
+    },
+    {
+      "id": "society",
+      "profile": "형",
+      "title": "사회와 가족",
+      "emoji": "👨‍👩‍👧",
+      "sections": [
+        {
+          "label": "이혼과 한부모 가정",
+          "videos": [
+            {
+              "videoId": "ijOTaxqR6JQ",
+              "title": "[티솔루션] 초등 3-2 사회⭐️이웃의 다양한 가족들",
+              "channel": "지학사 티솔루션",
+              "lang": "ko",
+              "durationSec": 208,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "-xIPAKG0Chc",
+              "title": "[다양성의 존중]가족의 탄생_모습은 달라도 우리는 모두 가족입니다 (FULL ver.)",
+              "channel": "국가인권위원회",
+              "lang": "ko",
+              "durationSec": 70,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "X_Wvo17EOiA",
+              "title": "Sesame Street: Little Children, Big Challenges - Divorce - \"Abby's Story\"",
+              "channel": "Sesame Street",
+              "lang": "en",
+              "durationSec": 67,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "4lzav15WRO0",
+              "title": "Types of Families (Nuclear, Extended and Single Parent Family)",
+              "channel": "Rhianna Martinez",
+              "lang": "en",
+              "durationSec": 465,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "스포츠 리그와 팀워크",
+          "videos": [
+            {
+              "videoId": "sAdyWGXGzNg",
+              "title": "학생들이 운동을 해야 하는 이유",
+              "channel": "초등백과",
+              "lang": "ko",
+              "durationSec": 193,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "lSuekPtI_Kc",
+              "title": "PHYSICAL EXERCISE for Children 🏃‍♂️ Benefits of SPORTS for Children 🏋️ Physical Education",
+              "channel": "Smile and Learn - English",
+              "lang": "en",
+              "durationSec": 335,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "GExcopnMtwo",
+              "title": "Little League's Mission and Values",
+              "channel": "Little League",
+              "lang": "en",
+              "durationSec": 262,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "대중교통",
+          "videos": [
+            {
+              "videoId": "-e-6hmQG5bU",
+              "title": "세상 모든 대중교통 타볼래",
+              "channel": "주니어골든벨",
+              "lang": "ko",
+              "durationSec": 397,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "uRhL2l-Pd0o",
+              "title": "Means of transport: Sustainable Mobility for Kids 🚴‍♂️🌍 | Happy Learning",
+              "channel": "Happy Learning English",
+              "lang": "en",
+              "durationSec": 261,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "소셜미디어의 좋은 점과 나쁜 점",
+          "videos": [
+            {
+              "videoId": "djFdEYuVpN8",
+              "title": "[초등(저)]스마트폰 과의존 예방교육_바른 SNS 사용자 되기!",
+              "channel": "한국지능정보사회진흥원 스마트쉼센터",
+              "lang": "ko",
+              "durationSec": 578,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "znwgs9cGzuY",
+              "title": "WHAT IS SOCIAL MEDIA AS EXPLAINED TO KIDS",
+              "channel": "Lesson Aider",
+              "lang": "en",
+              "durationSec": 205,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "도시와 교외(서버브)",
+          "videos": [
+            {
+              "videoId": "usgnwEmwTjU",
+              "title": "[티솔루션] 초등 4-2 사회⭐️도시의 문제와 해결 방안",
+              "channel": "지학사 티솔루션",
+              "lang": "ko",
+              "durationSec": 159,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "KMZF1Xwcms4",
+              "title": "Types of Communities for Kids | Urban, Suburban and Rural Communities | Social Studies for Kids",
+              "channel": "BuzzWithBee",
+              "lang": "en",
+              "durationSec": 270,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "또래 압력",
+          "videos": [
+            {
+              "videoId": "BtPYIjf6SbI",
+              "title": "[teenstress] 어린이 흡연예방교육9. 담배 거절하기",
+              "channel": "옴니핏 OMNIFIT ",
+              "lang": "ko",
+              "durationSec": 339,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "JUwjP0OZdb4",
+              "title": "What is Peer Pressure: A Kid Friendly Explanation on the Influence of Others",
+              "channel": "MindSpark Kids ",
+              "lang": "en",
+              "durationSec": 136,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "SBaOUzFi_mI",
+              "title": "What is the Right Way to Handle Peer Pressure - Wellness 101 Jr",
+              "channel": "Glucose Guy",
+              "lang": "en",
+              "durationSec": 262,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "label": "여성의 역할 변화",
+          "videos": [
+            {
+              "videoId": "xjUz2D0z6mU",
+              "title": "양성평등한 나라(디지털 양성평등 교육자료)",
+              "channel": "인천광역시교육청",
+              "lang": "ko",
+              "durationSec": 298,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "S7EtYowwygg",
+              "title": "여성 참정권의 역사",
+              "channel": "노우티KnowT",
+              "lang": "ko",
+              "durationSec": 399,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "MaibJd-I5bo",
+              "title": "What is Suffrage? (for kids) | Learn about the importance of the suffrage movement | Lesson Boosters",
+              "channel": "Lesson Boosters - Kids Science and History Videos",
+              "lang": "en",
+              "durationSec": 293,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            },
+            {
+              "videoId": "Ulh0DnFUGsk",
+              "title": "Gender Roles and Stereotypes",
+              "channel": "AMAZE Org",
+              "lang": "en",
+              "durationSec": 107,
+              "approved": false,
+              "verifiedAt": "2026-10-12"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

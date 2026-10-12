@@ -15,6 +15,7 @@ import * as storage from "./storage.js";
 import { getTodayDateKey } from "./time-limit.js";
 import { resetDay } from "./watch-log.js";
 import { el } from "./dom-utils.js";
+import { createListRefresher } from "./list-refresh.js";
 import * as topicsView from "./views/topics-view.js";
 import * as videosView from "./views/videos-view.js";
 import * as playerView from "./views/player-view.js";
@@ -257,31 +258,30 @@ async function main() {
   }
 
   // The tablet runs this as an installed app with no address bar, so there is
-  // no reload button to press. Coming back to the app IS the refresh: whenever
-  // it returns to the foreground we re-fetch the list, so a video approved on
-  // the PC shows up by switching away and back (or reopening from the home
-  // screen). Only the two list screens refresh — never mid-video, and never
-  // while a PIN is half-typed.
+  // no reload button to press. Instead the list refreshes itself: once a
+  // minute while the app sits on a list screen, and immediately whenever it
+  // returns to the foreground. A video approved on the PC therefore shows up
+  // on its own within a minute or two of the site redeploying. Only the two
+  // list screens refresh — never mid-video, and never while a PIN is half-typed.
   const REFRESHABLE_VIEWS = new Set(["topics", "videos"]);
+  const AUTO_REFRESH_INTERVAL_MS = 60_000;
 
-  document.addEventListener("visibilitychange", async () => {
-    if (document.visibilityState !== "visible") return;
-    if (!REFRESHABLE_VIEWS.has(route.view)) return;
-
-    let fresh;
-    try {
-      fresh = await loadTopics("./data/topics.json");
-    } catch {
-      return; // offline or a bad response: keep showing the list we already have
-    }
-
-    if (JSON.stringify(fresh) === JSON.stringify(data)) return;
-    data = fresh;
-    if (!data.profiles.includes(selectedProfile)) {
-      selectedProfile = data.profiles[0];
-    }
-    renderCurrentView();
+  const refreshList = createListRefresher({
+    load: () => loadTopics("./data/topics.json"),
+    isVisible: () => document.visibilityState === "visible",
+    canRefresh: () => REFRESHABLE_VIEWS.has(route.view),
+    apply(fresh) {
+      if (JSON.stringify(fresh) === JSON.stringify(data)) return;
+      data = fresh;
+      if (!data.profiles.includes(selectedProfile)) {
+        selectedProfile = data.profiles[0];
+      }
+      renderCurrentView();
+    },
   });
+
+  document.addEventListener("visibilitychange", refreshList);
+  setInterval(refreshList, AUTO_REFRESH_INTERVAL_MS);
 
   renderCurrentView();
 }
