@@ -1060,7 +1060,7 @@
               "channel": "지학사 티솔루션",
               "lang": "ko",
               "durationSec": 208,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1069,7 +1069,7 @@
               "channel": "국가인권위원회",
               "lang": "ko",
               "durationSec": 70,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1078,7 +1078,7 @@
               "channel": "Sesame Street",
               "lang": "en",
               "durationSec": 67,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1101,7 +1101,7 @@
               "channel": "초등백과",
               "lang": "ko",
               "durationSec": 193,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1119,7 +1119,7 @@
               "channel": "Little League",
               "lang": "en",
               "durationSec": 262,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
@@ -1142,7 +1142,7 @@
               "channel": "Happy Learning English",
               "lang": "en",
               "durationSec": 261,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
@@ -1156,7 +1156,7 @@
               "channel": "한국지능정보사회진흥원 스마트쉼센터",
               "lang": "ko",
               "durationSec": 578,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1165,7 +1165,7 @@
               "channel": "Lesson Aider",
               "lang": "en",
               "durationSec": 205,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
@@ -1179,7 +1179,7 @@
               "channel": "지학사 티솔루션",
               "lang": "ko",
               "durationSec": 159,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1188,7 +1188,7 @@
               "channel": "BuzzWithBee",
               "lang": "en",
               "durationSec": 270,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
@@ -1211,7 +1211,7 @@
               "channel": "MindSpark Kids ",
               "lang": "en",
               "durationSec": 136,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1220,7 +1220,7 @@
               "channel": "Glucose Guy",
               "lang": "en",
               "durationSec": 262,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
@@ -1243,7 +1243,7 @@
               "channel": "노우티KnowT",
               "lang": "ko",
               "durationSec": 399,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1252,7 +1252,7 @@
               "channel": "Lesson Boosters - Kids Science and History Videos",
               "lang": "en",
               "durationSec": 293,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             },
             {
@@ -1261,7 +1261,7 @@
               "channel": "AMAZE Org",
               "lang": "en",
               "durationSec": 107,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-12"
             }
           ]
