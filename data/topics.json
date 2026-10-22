@@ -1267,6 +1267,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "exploration",
+      "profile": "형",
+      "title": "탐험",
+      "subtitle": "TOEFL 리딩 배경지식",
+      "emoji": "🧭",
+      "sections": [
+        {
+          "label": "탐험가와 대항해시대",
+          "videos": [
+            {
+              "videoId": "pMZxGYUix6w",
+              "title": "신항로 개척과 대항해 시대 한번에 다보기(8분순삭ver.)",
+              "channel": "로빈의 역사 기록 / Robin's Historical Records",
+              "lang": "ko",
+              "durationSec": 518,
+              "approved": false,
+              "verifiedAt": "2026-10-22"
+            },
+            {
+              "videoId": "7Pve6hLLEp0",
+              "title": "콜럼버스가 '아시아'라고 굳게 믿고 있었던 땅의 정체는? 36일 간의 대항해, 신대륙 발견 | 콜럼버스 | #벌거벗은세계사 #사피엔스",
+              "channel": "사피엔스 스튜디오",
+              "lang": "ko",
+              "durationSec": 404,
+              "approved": false,
+              "verifiedAt": "2026-10-22"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
