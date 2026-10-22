@@ -1284,7 +1284,7 @@
               "channel": "로빈의 역사 기록 / Robin's Historical Records",
               "lang": "ko",
               "durationSec": 518,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-22"
             },
             {
@@ -1293,7 +1293,7 @@
               "channel": "사피엔스 스튜디오",
               "lang": "ko",
               "durationSec": 404,
-              "approved": false,
+              "approved": true,
               "verifiedAt": "2026-10-22"
             }
           ]
